@@ -30,6 +30,16 @@ while sair:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             self =False
+        #Checando qual tecla foi apertada
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                pos_x-=10
+            if event.key == pygame.K_RIGHT:
+                pos_x+=10
+            if event.key == pygame.K_UP:
+                pos_y-=10
+            if event.key == pygame.K_DOWN:
+                pos_y+=10    
     fundo.fill(branco)
     pygame.draw.rect(fundo,preto,{pos_x,pos_y,tamanho,tamanho})
     pygame.display.update()
