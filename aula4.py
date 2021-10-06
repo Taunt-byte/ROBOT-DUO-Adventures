@@ -30,6 +30,7 @@ while sair:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             self =False
-    
+    fundo.fill(branco)
+    pygame.draw.rect(fundo,preto,{pos_x,pos_y,tamanho,tamanho})
     pygame.display.update()
 pygame.quit()
