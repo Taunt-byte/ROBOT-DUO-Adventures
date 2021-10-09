@@ -25,6 +25,7 @@ pos_y=randint(0,(altura-tamanho)/10)*10
 velocidade_x = 0
 velocidade_y = 0
 
+
 fundo = pygame.display.set_mode((altura,largura))
 pygame.display.set_caption ('Snake')
 
