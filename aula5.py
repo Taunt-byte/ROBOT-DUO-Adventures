@@ -1,6 +1,8 @@
 #Objetivo da aula: Mais eventos e movimentação
 #Importá os comandos pygame
 import pygame
+from random import randint
+
 
 branco=(255,255,255)
 preto=(0,0,0)
@@ -18,9 +20,10 @@ except :
 altura = 400 
 largura = 400
 tamanho = 100
-pos_x=largura/2
-pos_y=altura/2
-
+pos_x=randint(0,(largura-tamanho)/10)*10
+pos_y=randint(0,(altura-tamanho)/10)*10
+velocidade_x = 0
+velocidade_y = 0
 
 fundo = pygame.display.set_mode((altura,largura))
 pygame.display.set_caption ('Snake')
@@ -29,18 +32,24 @@ sair=True
 while sair:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            self =False
+            sair = False
         #Checando qual tecla foi apertada
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                pos_x-=10
+                velocidade_x=-0.5
+                velocidade_y=0
             if event.key == pygame.K_RIGHT:
-                pos_x+=10
+                velocidade_x=0.5
+                velocidade_y=0
             if event.key == pygame.K_UP:
-                pos_y-=10
+                velocidade_x=0
+                velocidade_y=-0.5
             if event.key == pygame.K_DOWN:
-                pos_y+=10    
+                velocidade_x=0
+                velocidade_y=0.5    
     fundo.fill(branco)
-    pygame.draw.rect(fundo,preto,{pos_x,pos_y,tamanho,tamanho})
+    pygame.draw.rect(fundo,preto,[pos_x,pos_y,tamanho,tamanho])
+    pos_x+=velocidade_x
+    pos_y+=velocidade_y
     pygame.display.update()
 pygame.quit()
