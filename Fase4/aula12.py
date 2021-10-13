@@ -1,0 +1,1 @@
+#Objetivo da aula: Criação do placar e mais correção de erros
