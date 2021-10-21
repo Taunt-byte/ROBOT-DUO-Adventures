@@ -41,7 +41,7 @@ def jogo():
     pos_y =randrange(0,(altura-tamanho,10),
     maca_x=randrange(0,(largura-tamanho,10),
     maca_y=randrange(0,(altura-tamanho,10),
-    
+
     velocidade_x=0
     velocidade_y=0
     CobraXY = []
