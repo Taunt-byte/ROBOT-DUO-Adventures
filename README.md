@@ -37,11 +37,11 @@ Introdução a biblioteca Pygame da linguagem python com base no curso da Workov
 
 Para instalar esse projeto na sua maquina basta ter o git e digitar o seguinte codigo
 
-<code> </code>
+<code> git clone https://github.com/Taunt-byte/Curso-Introducao-Pygame.git </code>
 
 ## ❓ Como usar
 
-Falar como deve ser usado e explicar as funções do arquivo
+Para jogar o jogo basta executar o arquivo aula13.py que o jogo ira iniciar
 
 ## 🔨 Pre Requisitos
 
